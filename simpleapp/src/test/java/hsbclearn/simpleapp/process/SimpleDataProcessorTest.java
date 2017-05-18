@@ -14,9 +14,9 @@ public class SimpleDataProcessorTest extends SimpleDataProcessor {
 	public void test_processData_uniqueness() {
 		// given
 		List<IntegerWrapper> testData = generateData(new int[] {1, 2, 3, 3});
+		SimpleDataProcessor processor = new SimpleDataProcessor();		
 		
 		// when
-		SimpleDataProcessor processor = new SimpleDataProcessor();
 		List<IntegerWrapper> actuals = processor.processData(testData);
 		
 		// then
@@ -28,9 +28,9 @@ public class SimpleDataProcessorTest extends SimpleDataProcessor {
 	public void test_processData_sort() {
 		// given
 		List<IntegerWrapper> testData = generateData(new int[] {3, 20, -1, 19});
+		SimpleDataProcessor processor = new SimpleDataProcessor();
 		
 		// when
-		SimpleDataProcessor processor = new SimpleDataProcessor();
 		List<IntegerWrapper> actuals = processor.processData(testData);
 		
 		// then
