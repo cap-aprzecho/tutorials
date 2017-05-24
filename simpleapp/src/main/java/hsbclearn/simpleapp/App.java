@@ -3,7 +3,7 @@ package hsbclearn.simpleapp;
 import java.util.List;
 
 import hsbclearn.simpleapp.input.FakeDataInput;
-import hsbclearn.simpleapp.output.ConsoleDataOutput;
+import hsbclearn.simpleapp.output.FakeXmlConsoleDataOutput;
 import hsbclearn.simpleapp.process.SimpleDataProcessor;
 
 public class App { 
@@ -15,7 +15,7 @@ public class App {
         IDataProcessor processor = new SimpleDataProcessor();
         List<IntegerWrapper> processedData = processor.processData(data);
         
-        IDataOutput output = new ConsoleDataOutput();
+        IDataOutput output = new FakeXmlConsoleDataOutput();
         output.writeData(processedData);        
     }
 }

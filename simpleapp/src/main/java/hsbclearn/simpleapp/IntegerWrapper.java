@@ -1,7 +1,15 @@
 package hsbclearn.simpleapp;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IntegerWrapper implements Comparable<IntegerWrapper> {
 	
+	public IntegerWrapper() {}
+	
+	@XmlElement(name="Number")
 	private Integer data;		
 	
 	public IntegerWrapper(Integer data) {

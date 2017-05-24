@@ -1,5 +1,6 @@
 package hsbclearn.simpleapp.output;
 
+import java.io.File;
 import java.util.List;
 
 import hsbclearn.simpleapp.IDataOutput;
@@ -13,7 +14,7 @@ public class FakeXmlConsoleDataOutput implements IDataOutput {
 	public void writeData(List<IntegerWrapper> data) {		
 		IMessageParser parser = new JAXBParser();
 		String xmlResult = parser.saveAsXML(data);
-		System.out.println(xmlResult);
+		System.out.println(xmlResult);		
 	}
 
 }
