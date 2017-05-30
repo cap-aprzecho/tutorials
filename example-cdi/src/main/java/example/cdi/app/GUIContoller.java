@@ -2,14 +2,14 @@ package example.cdi.app;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 
 import example.cdi.service.Counted;
 import example.cdi.service.IOperationBean;
 import session.SessionStatementCounter;
 
-@SessionScoped
+@RequestScoped
 public class GUIContoller implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

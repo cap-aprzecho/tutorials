@@ -15,6 +15,7 @@ public class TechnicalOperationBean implements IOperationBean {
 	@Override
 	public void executeOperation(String stmt) {
 		ExternalConnection connection = resourceFactory.getConnection();
+		connection.openConnection();
 		connection.executeStatement(stmt);
 		connection.closeConnection();
 	}

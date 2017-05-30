@@ -4,13 +4,14 @@ import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 
 import external.ExternalConnection;
+import resources.Ready;
 import session.SessionStatementCounter;
 
 @Counted
 @Dependent
 public class BussinesOperationBean implements IOperationBean {
 
-	@Inject
+	@Inject @Ready
 	ExternalConnection connection;
 	
 	@Inject

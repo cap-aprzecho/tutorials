@@ -15,8 +15,8 @@ public class ExternalConnection {
 		connectionId = ++connectionIdSequence;
 	}
 	
-	public String executeStatement(String stmt) {
-		return "statement executed: " + stmt;
+	public void executeStatement(String stmt) {
+		System.out.println("statement executed: " + stmt);
 	};
 	
 	public void openConnection() {
@@ -24,6 +24,6 @@ public class ExternalConnection {
 	}
 	
 	public void closeConnection() {
-		System.out.println("closing connection" + connectionId);
+		System.out.println("closing connection " + connectionId);
 	}
 }

@@ -1,4 +1,4 @@
-package example.cdi.service;
+package resources;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;
@@ -12,8 +12,8 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 @Retention(RUNTIME)
-@Target({ TYPE, FIELD, PARAMETER, METHOD})
+@Target({ TYPE, FIELD, PARAMETER, METHOD })
 @Qualifier
-public @interface Counted {
+public @interface Ready {
 
 }
