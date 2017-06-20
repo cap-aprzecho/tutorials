@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>simpleapp-ear</artifactId>
 	<packaging>ear</packaging>
-	
+
 	<parent>
 		<groupId>hsbclearn</groupId>
 		<artifactId>simpleapp-parent</artifactId>
 		<version>0.1</version>
-	</parent>	
+	</parent>
 
 	<build>
 		<plugins>
@@ -29,15 +29,16 @@
 						<webModule>
 							<groupId>hsbclearn</groupId>
 							<artifactId>simpleapp-war</artifactId>
- 							<contextRoot>/simpleapp</contextRoot>							
+							<contextRoot>/simpleapp</contextRoot>
 						</webModule>
 						<ejbModule>
 							<groupId>hsbclearn</groupId>
-							<artifactId>simpleapp</artifactId> 													
-						</ejbModule>						
+							<artifactId>simpleapp</artifactId>
+							<bundleDir>/</bundleDir>
+						</ejbModule>
 					</modules>
 					<generateApplicationXml>true</generateApplicationXml>
-					<defaultLibBundleDir>lib/</defaultLibBundleDir>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
 					<skinnyWars>true</skinnyWars>
 				</configuration>
 			</plugin>
@@ -51,7 +52,7 @@
 			<artifactId>simpleapp-war</artifactId>
 			<version>0.1</version>
 			<type>war</type>
-		</dependency>			
+		</dependency>
 		<dependency>
 			<groupId>hsbclearn</groupId>
 			<artifactId>simpleapp</artifactId>

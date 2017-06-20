@@ -9,24 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import hsbclearn.simpleapp.examples.ejb.ExampleEJB;
+import hsbclearn.simpleapp.examples.ejb.AppService;
 
-@WebServlet("/ExampleServlet")
-public class ExampleServlet extends HttpServlet {
+@WebServlet("/ExampleServletJPA")
+public class ExampleServletJPA extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	@EJB
-	ExampleEJB exampleEJB;
+	AppService appService;
 	
-	public ExampleServlet() {
+	public ExampleServletJPA() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		exampleEJB.executeTransacted();
+		appService.createNewPersonWithPhones();
 		response.getWriter()
-			.append("Served at: ")
+			.append("JPA Servlet Served at: ")
 			.append(request.getContextPath());
 	}
 
